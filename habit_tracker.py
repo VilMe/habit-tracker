@@ -29,3 +29,7 @@ def track_habit(name:str, start: datetime, cost: float, minutes_used: float) -> 
 
     # Amount of days remaininng until you break a habit
     days_to_go: float | str = round(goal - days)
+
+    # displayable information
+    remaining_days: str = 'Cleared!' if days_to_go <= 0 else f'{days_to_go}'
+    time_since: str = f'{days} days' if hours > 72 else f'{hours} hours'
