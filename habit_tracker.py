@@ -33,3 +33,11 @@ def track_habit(name:str, start: datetime, cost: float, minutes_used: float) -> 
     # displayable information
     remaining_days: str = 'Cleared!' if days_to_go <= 0 else f'{days_to_go}'
     time_since: str = f'{days} days' if hours > 72 else f'{hours} hours'
+
+
+
+    return Habit(name=name, 
+                 time_since=time_since, 
+                 remaining_days=remaining_days,
+                 minutes_saved=minutes_used,
+                 money_saved=total_money_saved)
